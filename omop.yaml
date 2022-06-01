@@ -1,0 +1,122 @@
+id: https://w3id.org/omop-linkml
+name: omop-linkml
+description: omop
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  omop-linkml: https://w3id.org/omop-linkml
+default_prefix: omop-linkml
+types: {}
+
+slots:
+  persons:
+    range: Person
+    multivalued: true
+  person_id:
+    range: integer
+    examples:
+    - value: '99'
+  gender_concept_id:
+    range: integer
+    examples:
+    - value: '8532'
+  year_of_birth:
+    range: integer
+    examples:
+    - value: '1988'
+  month_of_birth:
+    range: integer
+    examples:
+    - value: '3'
+  day_of_birth:
+    range: integer
+    examples:
+    - value: '8'
+  birth_datetime:
+    range: string
+  race_concept_id:
+    range: integer
+    examples:
+    - value: '1'
+  ethnicity_concept_id:
+    range: integer
+    examples:
+    - value: '10'
+  location_id:
+    range: string
+  provider_id:
+    range: string
+  care_site_id:
+    range: integer
+    examples:
+    - value: '4'
+  person_source_value:
+    range: integer
+    examples:
+    - value: '1139716'
+  gender_source_value:
+    range: gender_source_value_enum
+    examples:
+    - value: F
+  gender_source_concept_id:
+    range: integer
+    examples:
+    - value: '0'
+  race_source_value:
+    range: string
+    examples:
+    - value: MORE THAN ONE RACE
+  race_source_concept_id:
+    range: integer
+    examples:
+    - value: '10000001'
+  ethnicity_source_value:
+    range: ethnicity_source_value_enum
+    examples:
+    - value: NOT HISPANIC OR LATINO
+  ethnicity_source_concept_id:
+    range: integer
+    examples:
+    - value: '10004'
+enums:
+  gender_source_value_enum:
+    permissible_values:
+      F:
+        description: F
+      M:
+        description: M
+  ethnicity_source_value_enum:
+    permissible_values:
+      NOT HISPANIC OR LATINO:
+        description: NOT HISPANIC OR LATINO
+      UNKNOWN:
+        description: UNKNOWN
+      HISPANIC OR LATINO:
+        description: HISPANIC OR LATINO
+
+classes:
+  person_list:
+    slots:
+      - persons
+  Person:
+    slots:
+    - person_id
+    - gender_concept_id
+    - year_of_birth
+    - month_of_birth
+    - day_of_birth
+    - birth_datetime
+    - race_concept_id
+    - ethnicity_concept_id
+    - location_id
+    - provider_id
+    - care_site_id
+    - person_source_value
+    - gender_source_value
+    - gender_source_concept_id
+    - race_source_value
+    - race_source_concept_id
+    - ethnicity_source_value
+    - ethnicity_source_concept_id
+    slot_usage: {}
