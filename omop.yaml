@@ -1,12 +1,12 @@
-id: https://w3id.org/omop-linkml
-name: omop-linkml
+id: https://w3id.org/omoplinkml
+name: omoplinkml
 description: omop
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
-  omop-linkml: https://w3id.org/omop-linkml
-default_prefix: omop-linkml
+  omoplinkml: https://w3id.org/omoplinkml
+default_prefix: omoplinkml
 types: {}
 
 slots:
